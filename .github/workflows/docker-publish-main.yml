@@ -24,11 +24,11 @@ env:
 
 jobs:
   integration:
-    uses: /.github/workflows/python-pip-workflow.yaml@main
+    uses: ./.github/workflows/python-pip-workflow.yml
     permissions:
       contents: read
   build:
-
+    needs: [integration]
     runs-on: ubuntu-latest
     permissions:
       contents: read
