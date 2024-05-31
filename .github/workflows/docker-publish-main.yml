@@ -23,6 +23,10 @@ env:
 
 
 jobs:
+  integration:
+    uses: /.github/workflows/python-pip-workflow.yaml@main
+    permissions:
+      contents: read
   build:
 
     runs-on: ubuntu-latest
