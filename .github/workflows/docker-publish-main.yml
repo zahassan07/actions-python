@@ -27,6 +27,7 @@ jobs:
     uses: ./.github/workflows/python-pip-workflow.yaml
     permissions:
       contents: read
+      checks: write
   build:
     needs: [integration]
     runs-on: ubuntu-latest
